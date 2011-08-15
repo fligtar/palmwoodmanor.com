@@ -1,0 +1,66 @@
+@font-face {
+    font-family: 'MutluOrnamental';
+    src: url('images/Mutlu__Ornamental-webfont.eot');
+    src: url('images/Mutlu__Ornamental-webfont.eot?#iefix') format('embedded-opentype'),
+         url('images/Mutlu__Ornamental-webfont.woff') format('woff'),
+         url('images/Mutlu__Ornamental-webfont.ttf') format('truetype'),
+         url('images/Mutlu__Ornamental-webfont.svg#MutluOrnamental') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FreebooterScriptRegular';
+    src: url('images/freebooterscript-webfont.eot');
+    src: url('images/freebooterscript-webfont.eot?#iefix') format('embedded-opentype'),
+         url('images/freebooterscript-webfont.woff') format('woff'),
+         url('images/freebooterscript-webfont.ttf') format('truetype'),
+         url('images/freebooterscript-webfont.svg#FreebooterScriptRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'FreebooterScript-AltsRegular';
+    src: url('images/FREEBSCA-webfont.eot');
+    src: url('images/FREEBSCA-webfont.eot?#iefix') format('embedded-opentype'),
+         url('images/FREEBSCA-webfont.woff') format('woff'),
+         url('images/FREEBSCA-webfont.ttf') format('truetype'),
+         url('images/FREEBSCA-webfont.svg#FreebooterScript-AltsRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+body {
+    background: #666;
+    color: #ccc;
+    font-family: 'FreebooterScriptRegular';
+}
+
+header, section, footer {
+    text-align: center;
+}
+section, footer {
+    font-size: 2em;
+}
+
+h1 {
+    font-size: 5em;
+    font-family: 'MutluOrnamental';
+    text-shadow: 1px 1px 1px #000;
+}
+a {
+    color: #ccc;
+    text-decoration: none;
+}
+a:hover {
+    color: #fff;
+}
+
+p {
+
+}
