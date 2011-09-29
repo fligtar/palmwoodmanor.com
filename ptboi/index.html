@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" href="../style.css" type="text/css" />
+      <style>
+        body {
+          margin: 0;
+          padding: 0;
+        }
+        iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          border: 0 none;
+          width: 100%;
+          height: 100%;
+          overflow: auto;
+          display: none;
+        }
+        #board {
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          margin-left: -400px;
+          pointer-events: none;
+          display: none;
+        }
+        .on iframe,
+        .on #board {
+          display: block;
+        }
+        form {
+          text-align: center;
+          min-width: 800px;
+        }
+        input {
+          font-size: 48px;
+          line-height: 48px;
+          border: 5px solid #333;
+          border-right-width: 0;
+          height: 60px;
+          border-radius: 64px 0 0 64px;
+          font-size: 20px;
+        }
+        #url {
+          padding: 0 20px 0 30px;
+          width: 400px;
+        }
+        input[type=submit] {
+          font-family: 'FreebooterScriptRegular';
+          border-radius: 0 64px 64px 0;
+          padding: 5px 30px 5px 20px;
+          border: 5px solid #333;
+          background: #c0d0c4;
+          font-size: 28px;
+          height: 70px;
+          vertical-align: top;
+          cursor: pointer;
+        }
+        .on form {
+          display: none;
+        }
+        .back {
+          position: absolute;
+          bottom: 20px;
+          left: 30px;
+          font-size: 30px;
+          line-height: 30px;
+        }
+      </style>
+      <title>Put the Board on it!</title>
+    </head>
+    <body>
+      <iframe id="foo"></iframe>
+      <img id="board" src="board.png">
+      <form id="urlform">
+        <h1>Put the Board on it!</h1>
+        <input type="text" id="url" autofocus><input type="submit" value="oh yeah">
+      </form>
+      <a href="/home_get_it_lol.html" class="back">&laquo; home</a>
+      <script>
+        var loc = window.location.href,
+            pos = loc.indexOf("?");
+        if (pos >= 0) {
+          var src = loc.substring(pos+1);
+          if (loc.indexOf("http://") < 0 || loc.indexOf("https://") < 0) {
+            src = "http://" + src;
+          }
+          document.body.setAttribute("class", "on");
+          document.getElementById("foo").setAttribute("src", decodeURIComponent(src));
+        } else {
+          var form = document.getElementById("urlform");
+          form.addEventListener("submit", function(e) {
+            e.preventDefault();
+            window.location = "?" + document.getElementById("url").value;
+          }, false);
+        }
+      </script>
+    </body>
+</html>
