@@ -82,6 +82,16 @@
           left: 30px;
           font-size: 30px;
           line-height: 30px;
+          text-shadow: 1px 1px 1px #333;
+        }
+        #reset {
+          display: none;
+        }
+        .on #home {
+          display: none;
+        }
+        .on #reset {
+          display: block;
         }
         @-moz-keyframes pulse{  
             from {  
@@ -109,14 +119,14 @@
         <h1>Put the Board on it!</h1>
         <input type="text" id="url" autofocus><input type="submit" value="oh yeah">
       </form>
-      <a href="/home_get_it_lol.html" class="back">&laquo; home</a>
+      <a href="/home_get_it_lol.html" id="home" class="back">&laquo; home</a>
+      <a href="/ptboi/" id="reset" class="back">&laquo; back</a>
       <script>
         var loc = window.location.href,
             pos = loc.indexOf("?");
         if (pos >= 0) {
           var src = loc.substring(pos+1);
           if (src.indexOf("http://") < 0 && src.indexOf("https://") < 0) {
-            console.log("foo");
             src = "http://" + src;
           }
           document.body.setAttribute("class", "on");
