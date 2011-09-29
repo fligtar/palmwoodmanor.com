@@ -115,7 +115,8 @@
             pos = loc.indexOf("?");
         if (pos >= 0) {
           var src = loc.substring(pos+1);
-          if (loc.indexOf("http://") < 0 && loc.indexOf("https://") < 0) {
+          if (src.indexOf("http://") < 0 && src.indexOf("https://") < 0) {
+            console.log("foo");
             src = "http://" + src;
           }
           document.body.setAttribute("class", "on");
