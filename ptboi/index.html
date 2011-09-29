@@ -51,6 +51,17 @@
         input:focus {
             outline: 0;
         }
+        input[type=submit]:focus,
+        input[type=submit]:hover {
+          -moz-animation-duration: .5s;
+          -moz-animation-name: pulse;
+          -moz-animation-iteration-count: infinite;
+          -moz-animation-direction: alternate;
+          -webkit-animation-duration: .5s;
+          -webkit-animation-name: pulse;
+          -webkit-animation-iteration-count: infinite;
+          -webkit-animation-direction: alternate;
+        }
         input[type=submit] {
           font-family: 'FreebooterScriptRegular';
           border-radius: 0 64px 64px 0;
@@ -71,6 +82,22 @@
           left: 30px;
           font-size: 30px;
           line-height: 30px;
+        }
+        @-moz-keyframes pulse{  
+            from {  
+              background: #c0d0c4;
+            } 
+            to {
+              background: white;
+            }  
+        }
+        @-webkit-keyframes pulse {  
+            from {  
+              background: #c0d0c4;
+            } 
+            to {
+              background: white;
+            }  
         }
       </style>
       <title>Put the Board on it!</title>
